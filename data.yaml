@@ -1,4 +1,4 @@
-path: dataset5
+path: dataset6
 train: images/train
 val: images/val
 channels: 64
