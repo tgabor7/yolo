@@ -1,6 +1,7 @@
-path: dataset
+path: dataset5
 train: images/train
 val: images/val
+channels: 64
 
 names:
   0: 'water_pan'
