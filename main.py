@@ -68,16 +68,18 @@ def _patched_load_image(self, i, rect_mode=True, resize_short=False):
 
 BaseDataset.load_image = _patched_load_image
 
-model = YOLO("yolo11n_64ch.pt")
+model = YOLO("yolo26n_64ch.pt")
 model.train(
     data="data.yaml",
     epochs=100,
     imgsz=256,
     batch=16,
-    device="cpu",
+    device='cpu',
     mosaic=0.0,
     hsv_h=0.0,
     hsv_s=0.0,
     hsv_v=0.0,
-    scale=0.0,
+    scale=0.1,
+    degrees=25.0,
+    translate=0.2,
 )  # fmt: skip
