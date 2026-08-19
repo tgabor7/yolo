@@ -68,18 +68,36 @@ def _patched_load_image(self, i, rect_mode=True, resize_short=False):
 
 BaseDataset.load_image = _patched_load_image
 
+<<<<<<< Updated upstream
 model = YOLO("yolo26n_64ch.pt")
+=======
+model = YOLO("/home/gabor/lexunit/alpha-earth-mokolas/runs/detect/train-76/weights/last.pt")
+>>>>>>> Stashed changes
 model.train(
     data="data.yaml",
-    epochs=100,
+    epochs=1000,
+    resume=True,
     imgsz=256,
+<<<<<<< Updated upstream
     batch=16,
     device='cpu',
+=======
+    batch=64,
+    workers=0,
+    device="0",
+>>>>>>> Stashed changes
     mosaic=0.0,
     hsv_h=0.0,
     hsv_s=0.0,
     hsv_v=0.0,
     scale=0.1,
+<<<<<<< Updated upstream
     degrees=25.0,
     translate=0.2,
+=======
+    fliplr=0.25,
+    flipud=0.25,
+    degrees=25.0,
+    translate=0.1,
+>>>>>>> Stashed changes
 )  # fmt: skip
